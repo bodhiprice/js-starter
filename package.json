@@ -11,10 +11,11 @@
   },
   "scripts": {
     "buildJS": "browserify js/main.js -o build/scripts.js",
-    "lintJS": "eslint js",
+    "lintJS": "eslint js || true",
     "clean": "rm -r build/*",
     "move": "cp index.html build",
     "stop": "pkill -SIGINT reactor",
+    "test": "",
     "server": "nodemon --watch package.json ./server.js",
     "concatCSS": "concat-cli -f js/*.css js/**/*.css -o temp.css",
     "postCSS": "postcss --use cssnext --use postcss-nested -o build/styles.css temp.css",
@@ -32,24 +33,25 @@
   },
   "devDependencies": {
     "babel-cli": "6.2.0",
-    "babel-eslint": "^4.1.6",
+    "babel-eslint": "4.1.6",
     "babel-preset-es2015": "6.1.18",
     "babelify": "7.2.0",
     "browserify": "12.0.1",
     "concat": "1.0.0",
     "concat-cli": "4.0.0",
     "cssnext": "1.8.4",
-    "eslint": "^1.10.3",
+    "eslint": "1.10.3",
     "ghooks": "1.0.1",
     "postcss": "5.0.12",
     "postcss-cli": "2.3.2",
     "postcss-nested": "1.0.0",
     "stylelint": "2.3.5",
     "watch-run": "1.2.4"
-  }
+  },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run lintJS"
+      "pre-commit": "npm run lintJS",
+      "pre-push": "npm test"
     }
   }
 }
