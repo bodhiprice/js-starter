@@ -1,0 +1,7 @@
+h1 {
+  display: flex;
+  margin-bottom: 0;
+  sup {
+    color: var(--alertColor);
+  }
+}
