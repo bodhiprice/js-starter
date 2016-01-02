@@ -50,7 +50,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run lintJS && npm run lintCSS"
+      "pre-commit": "npm run lintJS --loglevel=silent && npm run lintCSS --loglevel=silent"
     }
   }
 }
