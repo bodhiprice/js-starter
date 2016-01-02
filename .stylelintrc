@@ -1,6 +1,24 @@
 {
   "rules": {
     "color-no-invalid-hex": true,
+    "rule-nested-empty-line-before": "never-multi-line",
     "declaration-colon-space-after": "always",
+    "declaration-block-no-single-line": true,
+    "declaration-block-semicolon-newline-after": "always",
+    "block-closing-brace-newline-after": "always",
+    "block-closing-brace-newline-before": "always",
+    "block-opening-brace-newline-after": "always",
+    "block-opening-brace-space-before": "always",
+    "block-no-empty": true,
+    "rule-trailing-semicolon": "always",
+    "comment-empty-line-before": "always",
+    "max-empty-lines": 1,
+    "no-missing-eof-newline": true,
+    "string-quotes": "single",
+    "rule-no-duplicate-properties": true,
+    "rule-non-nested-empty-line-before": "always",
+    "rule-properties-order": "alphabetical",
+    "no-eol-whitespace": true,
+    "rule-nested-empty-line-before": "never"
   }
 }
