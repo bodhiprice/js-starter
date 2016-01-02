@@ -10,7 +10,8 @@
   },
   "scripts": {
     "buildJS": "browserify js/main.js -o build/scripts.js",
-    "lintJS": "eslint js || true",
+    "lintJS": "eslint js",
+    "lintCSS": "stylelint js/**/*css",
     "clean": "rm -r build/*",
     "move": "cp index.html build",
     "stop": "pkill -SIGINT jsStarter",
@@ -44,12 +45,12 @@
     "postcss": "5.0.12",
     "postcss-cli": "2.3.2",
     "postcss-nested": "1.0.0",
-    "stylelint": "2.3.5",
+    "stylelint": "3.2.0",
     "watch-run": "1.2.4"
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run lintJS"
+      "pre-commit": "npm run lintJS && npm run lintCSS"
     }
   }
 }

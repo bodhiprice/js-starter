@@ -10,6 +10,20 @@
   "rules": {
     "indent": [2, 2],
     "semi": [2, "always"],
-    "quotes": [2, "single"]
+    "quotes": [2, "single"],
+    "no-alert": 2,
+    "no-empty": 2,
+    "no-eval": 2,
+    "no-unused-vars": 2,
+    "brace-style": [2, "stroustrup"],
+    "no-new-func": 2,
+    "no-debugger": 2,
+    "no-extra-semi": 2,
+    "valid-jsdoc": 2,
+    "valid-typeof": 2,
+    "no-use-before-define": 2,
+    "func-style": [2, "expression", { "allowArrowFunctions": true }],
+    "no-var": 2,
+    "prefer-const": 2
   }
 }
