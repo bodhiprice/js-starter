@@ -1,8 +1,7 @@
 {
-  "name": "reactor",
+  "name": "jsStarter",
   "version": "1.0.0",
   "description": "JavaScript project starter",
-  "main": "index.js",
   "browserify": {
     "transform": "babelify"
   },
@@ -14,7 +13,7 @@
     "lintJS": "eslint js || true",
     "clean": "rm -r build/*",
     "move": "cp index.html build",
-    "stop": "pkill -SIGINT reactor",
+    "stop": "pkill -SIGINT jsStarter",
     "test": "",
     "server": "nodemon --watch package.json ./server.js",
     "concatCSS": "concat-cli -f js/*.css js/**/*.css -o temp.css",
@@ -50,8 +49,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run lintJS",
-      "pre-push": "npm test"
+      "pre-commit": "npm run lintJS"
     }
   }
 }
